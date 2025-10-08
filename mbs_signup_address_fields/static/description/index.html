@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Odoo Module: Google API Key Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-left: 3px solid #2c3e50;
+            overflow-x: auto;
+        }
+        .note {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Odoo Module: Google Places API Key Setup</h1>
+
+    <h2>1. Create a Google Maps API Key</h2>
+    <ol>
+        <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>.</li>
+        <li>Create a new project (or select an existing one).</li>
+        <li>Enable the following APIs:
+            <ul>
+                <li>Maps JavaScript API</li>
+                <li>Places API</li>
+            </ul>
+        </li>
+        <li>Create an API Key under <strong>APIs & Services → Credentials → Create Credentials → API Key</strong>.</li>
+        <li>Optionally, restrict the key to your website domain(s) and these APIs.</li>
+    </ol>
+
+    <h2>2. Add the API Key to Odoo Settings</h2>
+    <p>This module uses <code>res.config.settings</code> to store your API key. Follow these steps:</p>
+    <ol>
+        <li>Go to <strong>Settings → General Settings</strong> (or the menu you created for the module).</li>
+        <li>Locate the field <code>Google Maps API Key</code>.</li>
+        <li>Paste your API key and save.</li>
+    </ol>
+
+    <div class="note">
+        <strong>Note:</strong> Make sure the key is active and has the correct API permissions. Without it, the street autocomplete in the signup form will not work.
+    </div>
+
+ 
+    <h2>3. Test the Signup Form</h2>
+    <ul>
+        <li>Go to your signup page.</li>
+        <li>Start typing in the street field — Google autocomplete suggestions should appear.</li>
+        <li>Ensure phone formatting and company type logic still work.</li>
+    </ul>
+
+    <h2>5. Troubleshooting</h2>
+    <ul>
+        <li>If autocomplete does not appear, check the console for errors.</li>
+        <li>Verify that your API key is correctly saved in <code>Settings → General Settings → Google Place Api</code>.</li>
+        <li>Make sure the Maps JavaScript API and Places API are enabled in Google Cloud.</li>
+    </ul>
+</body>
+</html>
