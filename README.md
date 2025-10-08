@@ -1,9 +1,9 @@
-# Odoo Module: Google Places API Key Setup
+# Odoo Module: MBS Signup Address Fields
 
-This module integrates Google Places API with Odoo to enable address autocomplete functionality on the signup form.
+This module is extended of signup_address_fields_fl1 module.
 
 ---
-
+How to Setup Google Places on the Field Street
 ## 1. Create a Google Maps API Key
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
