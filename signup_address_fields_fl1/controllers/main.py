@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.web.controllers.main import Home,SIGN_UP_REQUEST_PARAMS
+# from odoo.addons.web.controllers.main import Home,SIGN_UP_REQUEST_PARAMS
 from odoo.addons.web.controllers.home import Home
 from odoo.addons.auth_signup.models.res_users import SignupError
 from odoo.exceptions import UserError
