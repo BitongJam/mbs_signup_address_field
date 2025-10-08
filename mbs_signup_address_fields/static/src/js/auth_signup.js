@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const streetInput = document.getElementById('street');
     const googleApiKey = document.getElementById('google_api_key_holder').dataset.googleApiKey; // key from config
     console.log("google api: ", googleApiKey)
-    // const googleApiKey = 'AIzaSyD4qSeV-g9lq8uwSTFt9POL3Ki9oxpCD54'
 
     function loadGooglePlacesApi(apiKey, callback) {
         if (!apiKey) {
